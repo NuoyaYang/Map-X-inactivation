@@ -25,11 +25,11 @@ conda deactivate
 cd /project/swang585_1200
 ls
 ```
->should have two files: cellSNP  downloaded_SRA
+>should have two files: **cellSNP** & **downloaded_SRA**
 >
->within downloaded_SRA: there is a script named "download" that download sra file with accession number and then turn it into fastq
-sbatch download
+>within downloaded_SRA: there is a script named **download** that download SRA file with accession number and then turn it into fastq
 ```
+sbatch download
 module load sratoolkit
 fastq-dump --gzip --split-files -A [accession number]
 ```
