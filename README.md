@@ -1,6 +1,6 @@
 # Map-X-inactivation
 
-**Implement cellSNP-lite pipeline(_the latest version, the old version is called cellSNP_)**
+**Implement cellSNP-lite pipeline**(_the latest version, the old version is called cellSNP_)
 >login to the CARC cluster over ssh
 ```
 ssh nuoyayan@discovery.usc.edu
