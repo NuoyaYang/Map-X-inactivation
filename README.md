@@ -12,7 +12,9 @@ module purge
 module load conda
 conda init bash
 source ~/.bashrc
+```
 >only have to create the environment once, mamba or conda both works, switch command when do so
+```
 conda create -n cellsnp
 conda activate cellsnp
 conda install -c bioconda cellsnp-lite
@@ -24,6 +26,7 @@ cd /project/swang585_1200
 ls
 ```
 >should have two files: cellSNP  downloaded_SRA
+>
 >within downloaded_SRA: there is a script named "download" that download sra file with accession number and then turn it into fastq
 sbatch download
 ```
