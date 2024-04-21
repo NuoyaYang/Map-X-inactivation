@@ -20,6 +20,7 @@ conda activate cellsnp
 conda install -c bioconda cellsnp-lite
 conda deactivate
 ```
+
 **Download SRA to test the pipeline**
 ```
 cd /project/swang585_1200
@@ -39,6 +40,7 @@ sbatch download
 >
 >To copy a file, command line works but if there is a lot data, one might want to use the **copy** script.
 >
+
 **Align fastq Reads**
 >To align 10x genomic scRNA-seq reads, the recommanded software is **cellranger count**.
 >
@@ -50,4 +52,17 @@ sbatch download
 >
 >before you run the cellranger count, you have to change all the fastq file name into a specific format like such:
 >
->original: **SRR8427168_1.fastq.gz**  the correct version:**SRR8427168_S1_L001_R1_001.fastq.gz**; hence, the sample name within the **alignment** will be **SRR8427168**.
+>original: **SRR8427168_1.fastq.gz**  the correct version:**SRR8427168_S1_L001_R1_001.fastq.gz**;
+>
+>hence, the sample within the **alignment** will be **SRR8427168**.
+
+**Run cellSNP-lite**
+>In order to run cellSNP-lite, you need a few files: #BAM, #barcodes, #reference SNP
+>
+>But before you run your own data, please download the **cellSNP_testdata_10x** folder from this following link:
+```
+>wget link
+```
+>and do a test run with the file provided. You can run it in interactive node or using the script **cellSNP**.
+>
+>Once you passed the test run, again use the script **copy** to get your processed #BAM, #barcodes, and #reference SNP **hg38** from either the **cellranger count** or this link: https://sourceforge.net/projects/cellsnp/files/SNPlist/. Then, you can run cellSNP-lite pipeline following instructions from this link: https://cellsnp-lite.readthedocs.io/en/latest/main/manual.html. I used the 1a mode.
