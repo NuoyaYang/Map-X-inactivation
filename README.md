@@ -47,3 +47,7 @@ sbatch download
 >https://www.10xgenomics.com/support/software/cell-ranger/latest/tutorials/cr-tutorial-ct
 >
 >I wrote a script named **alignment** that will run it, but please adjust it accordingly.
+>
+>before you run the cellranger count, you have to change all the fastq file name into a specific format like such:
+>
+>original: **SRR8427168_1.fastq.gz**  the correct version:**SRR8427168_S1_L001_R1_001.fastq.gz**; hence, the sample name within the **alignment** will be **SRR8427168**.
