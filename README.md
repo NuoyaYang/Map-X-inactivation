@@ -1,6 +1,6 @@
 # Map-X-inactivation
 
-**Implement cellSNP-lite pipeline**(_the latest version, the old version is called cellSNP_)
+**Implement cellSNP-lite pipeline**(_the latest version, the older version is called cellSNP_)
 >login to the CARC cluster over ssh
 ```
 ssh nuoyayan@discovery.usc.edu
@@ -25,9 +25,9 @@ conda deactivate
 cd /project/swang585_1200
 ls
 ```
->should have two files: **cellSNP** & **downloaded_SRA**
+>should have three files: **ANNOVAR**, **cellSNP** & **downloaded_SRA**
 >
->within downloaded_SRA: there is a script named **download** that download SRA file with accession number and then turn it into fastq
+>within downloaded_SRA: there is a script named **SRAdownload** that download SRA file with accession number and then turn it into fastq
 ```
 sbatch download
 module load sratoolkit
