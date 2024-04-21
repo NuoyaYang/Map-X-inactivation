@@ -31,12 +31,17 @@ ls
 ```
 sbatch download
 ```
->the fastq that has been downloaded will be stored within the current directory.
+>The fastq files that have been downloaded will be stored within whatever directory you wrote your script in,but you can change where it will be stored within the script or later.
 >
->you can change where it has been stored within the script or later
+>Also, there is a new version called **fasterq-dump**, it might be better to use this function in the future.
 >
->also, there is a new version called **fasterq-dump**, in the future, it might be better to use this function
+>Once there is the raw fastq, I copied them into a new folder within **downloaded_SRA**, called **fastq**, the original will stay in **downloaded_SRA** as backup.
 >
->Once, there is the raw fastq, I copied them into additional folder within **downloaded_SRA**, called **fastq**, the original will stay there as backup
+>To copy a file, command line works but if there is a lot data, one might want to use the **copy** script.
 >
->to copy a file, command line works but if there is a lot, might want to use the **copy** script
+**Align fastq Reads**
+>To align 10x genomic scRNA-seq reads, the recommanded software is **cellranger count**.
+>
+>Here is the website tutorial that will be helpful: https://www.10xgenomics.com/support/software/cell-ranger/latest/tutorials/cr-tutorial-ct
+>
+>I wrote a script named **alignment** that will run it, but please adjust it accordingly.
