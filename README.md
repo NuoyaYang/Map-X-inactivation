@@ -30,6 +30,13 @@ ls
 >within downloaded_SRA: there is a script named **SRAdownload** that download SRA file with accession number and then turn it into fastq
 ```
 sbatch download
-module load sratoolkit
-fastq-dump --gzip --split-files -A [accession number]
 ```
+>the fastq that has been downloaded will be stored within the current directory.
+>
+>you can change where it has been stored within the script or later
+>
+>also, there is a new version called **fasterq-dump**, in the future, it might be better to use this function
+>
+>Once, there is the raw fastq, I copied them into additional folder within **downloaded_SRA**, called **fastq**, the original will stay there as backup
+>
+>to copy a file, command line works but if there is a lot, might want to use the **copy** script
