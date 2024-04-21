@@ -43,6 +43,7 @@ sbatch download
 >To align 10x genomic scRNA-seq reads, the recommanded software is **cellranger count**.
 >
 >Here is the website tutorial that will be helpful:
+>
 >https://www.10xgenomics.com/support/software/cell-ranger/latest/tutorials/cr-tutorial-ct
 >
 >I wrote a script named **alignment** that will run it, but please adjust it accordingly.
