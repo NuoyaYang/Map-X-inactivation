@@ -60,9 +60,27 @@ sbatch download
 >In order to run cellSNP-lite, you need a few files: #BAM, #barcodes, #reference SNP
 >
 >But before you run your own data, please download the **cellSNP_testdata_10x** folder from this following link:
-```
->wget link
-```
->and do a test run with the file provided. You can run it in interactive node or using the script **cellSNP**.
 >
->Once you passed the test run, again use the script **copy** to get your processed #BAM, #barcodes, and #reference SNP **hg38** from either the **cellranger count** or this link: https://sourceforge.net/projects/cellsnp/files/SNPlist/. Then, you can run cellSNP-lite pipeline following instructions from this link: https://cellsnp-lite.readthedocs.io/en/latest/main/manual.html. I used the 1a mode.
+>https://sourceforge.net/projects/cellsnp/files/SNPlist/
+>
+>I then logout HPC
+```
+cd /Users/laurayang/Download
+scp -r ./cellSNP_testdata_10x nuoyayan@discovery.usc.edu:/project/swang585_1200/cellSNP
+```
+>then computer will have the following pop up
+```
+nuoyayan@discovery.usc.edu's password:
+```
+>type in your discovery login password and then the file will be copied from your local computer onto HPC and then you can log into hpc to check it. Make sure the file is there and you can now do a test run with the file provided. You can run it in interactive node or using the script **cellSNP**.
+>
+>Once you passed the test run, again use the script **copy** to get your processed #BAM, #barcodes, and #reference SNP **hg38** from either the **cellranger count** or
+```
+>wget http://ufpr.dl.sourceforge.net/project/cellsnp/SNPlist/genome1K.phase3.SNP_AF5e2.chr1toX.hg38.vcf.gz
+```
+>from this link: https://sourceforge.net/projects/cellsnp/files/SNPlist/.
+>Then, you can run cellSNP-lite pipeline following instructions from this link: https://cellsnp-lite.readthedocs.io/en/latest/main/manual.html. I used the **1a mode**.
+
+
+
+scp nuoyayan@discovery.usc.edu:/project/swang585_1200/ANNOVAR/annovar/myanno.hg19_multianno.csv /Users/laurayang/Desktop
